@@ -9,7 +9,7 @@ body {
       margin-top: 20px;
     }
     .header {
-      background-image: url(/img/bandera_sanlucar.gif);
+      background-image: url(img/bandera_sanlucar.gif);
       background-size: cover;
       background-position: center;
       height: 500px;
