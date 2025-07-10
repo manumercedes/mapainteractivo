@@ -1,0 +1,89 @@
+  body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    .focus-view {
+      text-align: center;
+      display: none;
+      margin-top: 20px;
+    }
+
+    .focus-view img {
+      width: 80%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .focus-view p {
+      margin-top: 15px;
+      font-size: 1.1rem;
+      background: white;
+      padding: 15px;
+      border-left: 4px solid #007acc;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 4px;
+    }
+
+    .volver {
+      margin-top: 20px;
+      margin-bottom: 30px;
+      display: inline-block;
+      background: #007acc;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      .gallery img {
+        width: 40%;
+        height: 100px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+      }
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 20px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }

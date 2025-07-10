@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patrimonio Sanlúcar</title>
+  <link rel="stylesheet" href="patrimonio.css" />
+</head>
+<body>
+<script src="patrimonio.js"></script>
+  
+<h1>Galería Interactiva</h1>
+
+  <div class="gallery" id="galeria">
+    <img src="/enlaces/cinegrancinema1.jpeg" alt="Imagen 1" onclick="mostrar(0)">
+    <img src="/enlaces/cinebarrameda.jpg" alt="Imagen 2" onclick="mostrar(1)">
+    <img src="/enlaces/cinerialto.jpg" alt="Imagen 3" onclick="mostrar(2)">
+    <img src="/enlaces/castilloespiritusanto.webp" alt="Imagen 4" onclick="mostrar(3)">
+    <img src="/enlaces/baluartesansalvador.jpg" alt="Imagen 5" onclick="mostrar(4)">
+    <img src="/enlaces/castillitobajodeguia.jpg" alt="Imagen 6" onclick="mostrar(5)">
+    <img src="/enlaces/estaciontren1.jpg" alt="Imagen 7" onclick="mostrar(6)">
+    <img src="/enlaces/teatroprincipal.jpg" alt="Imagen 8" onclick="mostrar(7)">
+  </div>
+
+  <div class="focus-view" id="vista">
+    <img id="imagenGrande" src="" alt="Imagen enfocada">
+    <p id="texto"></p>
+    <div><span class="volver" onclick="volver()">Volver a la galería</span></div>
+  </div>
+  <a href="../#inicio"><!-- Enlace al inicio -->
+  <button style="padding: 10px 20px;margin-left: 43%;margin-top: 30px; background-color: #004080; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    Regresar al inicio
+  </button></a>
+</body>
+
+   <footer>
+    &copy; 2025 Manuel – Todos los derechos reservados 
+   </footer>
+    
+</html>

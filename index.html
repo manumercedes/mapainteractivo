@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Mapa interactivo Sanlúcar de Barrameda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <!-- Estilos de Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    #map { height: 70vh; }
+  </style>
+</head>
+<header class="header" id="inicio">
+
+     <nav class="navbar">
+    <ul>
+      <li><img src="/img/bandera_sanlucar.gif" alt="Logo de Sanlúcar de Barrameda" class="logo"></li>
+      <li><li><img src="/img/bandera_andalucia.webp" alt="Logo de bandera_andalucia" class="logo"></li></li>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="/enlaces/caridad.html">Virgen de la Caridad</a></li>
+      <li><a href="/enlaces/patrimonio.html">Patrimonio Perdido</a></li>
+    </ul>
+  </nav>
+  <div class="h1header">
+    <h1 onclick="toggleInfo('info1')">Mapa interactivo de Sanlúcar de Barrameda</h1>
+    <div class="info" id="info1">Este mapa muestra puntos clave de la historia de la ciudad, desde el Castillo de Santiago hasta las rutas del vino manzanilla.</div>
+
+    <p onclick="toggleInfo('info2')">Descubre la historia y el patrimonio de Sanlúcar a través de un mapa interactivo.</p>
+    <div class="info" id="info2">Incluye imágenes, audios y datos históricos de cada lugar señalado.</div>
+
+    <p onclick="toggleInfo('info3')">Haz clic en los marcadores para explorar lugares históricos y leyendas locales.</p>
+    <div class="info" id="info3">Por ejemplo: la leyenda de la Reina Mora o el misterio del convento de las Capuchinas.</div>
+  </div>
+  </header>
+<body>
+  <script src="main.js"></script>
+  
+
+<div id="map"></div>
+
+<!-- Script de Leaflet -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+  // Inicializar el mapa
+  var map = L.map('map').setView([36.7781, -6.3515], 13); // Coordenadas de Sanlúcar
+
+  // Añadir capa de mapa (OpenStreetMap)
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+    const historias = [
+  { nombre: "La leyenda del castillo", lat: 36.7770, lng: -6.3502, url: "/enlaces/castillo.html" },
+  { nombre: "Palacio de Orleans", lat: 36.7757, lng: -6.3545, url: "/enlaces/palacioorleans.html" },
+  { nombre: "Palacio de Medina sidonia", lat: 36.7764, lng: -6.3535, url: "/enlaces/palaciomedina.html" },
+  { nombre: "Bsilica Nuestra Señora de la Caridad", lat: 36.7750, lng: -6.3545, url: "/enlaces/caridad.html" },
+  { nombre: "Iglesia de San Francisco", lat: 36.7820, lng: -6.3490, url: "/francisco.html" },
+  { nombre: "Convento de Madre de Dios", lat: 36.77754, lng: -6.35522, url: "/enlaces/madredios.html" },
+  { nombre: "Convento de Capuchinos", lat: 36.7750, lng: -6.3610, url: "/enlaces/capuchino.html" },
+  { nombre: "Iglesia de Santo Domingo", lat: 36.7805, lng: -6.3506, url: "/enlaces/santodomingo.html" }
+];
+
+historias.forEach(historia => {
+  L.marker([historia.lat, historia.lng])
+    .addTo(map)
+    .bindPopup(`<a href="${historia.url}" >${historia.nombre}</a>`);
+});
+
+</script>
+
+</body>
+<footer class="footer">
+  <p>&copy; 2025 Manuel – Todos los derechos reservados</p>
+</footer>
+</html>
