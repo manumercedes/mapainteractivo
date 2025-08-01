@@ -39,12 +39,12 @@ body {
 
    .navbar a {
     display: inline-block;
-    color: white;
+    color: black;
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
     padding: 10px 15px;
-    background-color: #004080;
+
     border-radius: 6px;
     transition: transform 0.4s ease, background-color 0.3s ease;
   }
