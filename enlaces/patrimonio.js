@@ -10,14 +10,14 @@ const textos = [
     ];
 
     const imagenes = [
-      "/enlaces/cinegrancinema1.jpeg",
-      "/enlaces/cinebarrameda.jpg",
-      "/enlaces/cinerialto.jpg",
-      "/enlaces/castilloespiritusanto.webp",
-      "/enlaces/baluartesansalvador.jpg",
-      "/enlaces/castillitobajodeguia.jpg",
-      "/enlaces/estaciontren1.jpg",
-      "/enlaces/teatroprincipal.jpg",
+      "cinegrancinema1.jpeg",
+      "cinebarrameda.jpg",
+      "cinerialto.jpg",
+      "castilloespiritusanto.webp",
+      "baluartesansalvador.jpg",
+      "castillitobajodeguia.jpg",
+      "estaciontren1.jpg",
+      "teatroprincipal.jpg",
     ];
 
     function mostrar(index) {
